@@ -1,0 +1,26 @@
+/*.container {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 90%;
+}*/
+
+#output {
+	padding: 10px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.row {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.button {
+	background-color: orange;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	border: 1px white solid;
+	flex-basis: 30%;
+}
