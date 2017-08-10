@@ -1,26 +1,27 @@
-/*.container {
+main {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 90%;
-}*/
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+}
 
 #output {
-	padding: 10px;
 	text-align: center;
 	font-size: 2em;
 }
 
-.row {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.button {
+main .button {
 	background-color: orange;
 	color: white;
-	padding: 20px;
 	text-align: center;
 	border: 1px white solid;
-	flex-basis: 30%;
+	width: 20%;
+	flex-grow: 1;
+	vertical-align: middle;
+}
+
+#equals {
+	flex-grow: 2;
 }
