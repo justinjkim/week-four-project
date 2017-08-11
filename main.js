@@ -1,16 +1,26 @@
-let operation = 0;
-
-let output = document.getElementById("output");
-output.innerHTML = operation;
+let display = document.getElementById("display");
+display.innerHTML = "";
 
 let buttons = document.querySelectorAll(".button");
-let operators = ['+', '-', '/', '*'];
+
+function logit() {
+	let target = this.value;
+	console.log(target);
+	output.innerHTML += target;
+	
+
+	let total = output.innerHTML;
+	console.log(total);
+
+	if (target === "=") {
+		eval(target);
+	}
+
+}
 
 for (i in buttons) {
-	buttons[i].addEventListener("click", function(e) {
-		let target = e.target.value;
-		console.log(target);
-
+	buttons[i].addEventListener("click", logit 
+		
 		// if (target.value === "AC") {
 		// 	output.innerHTML = "0";
 		// 	operation = 0;
@@ -26,9 +36,9 @@ for (i in buttons) {
 		// 	console.log(total);
 		// 	return total;
 		// }
-	} // end of onclick function
-); // end of event listener
-
+		 // end of onclick function
+	); // end of event listener
 } // end of for loop
 
 
+ 
