@@ -27,7 +27,7 @@ for (let i = 0; i < input.length; i++) {
 let equals = document.querySelector(".equals");
 equals.addEventListener("click", function() {
 	let answer = eval(evaluation);
-	display.innerHTML = parseFloat(answer);
+	display.innerHTML = answer.toLocaleString({minimumFractionDigits: 2});
 	console.log(answer);
 
 });
