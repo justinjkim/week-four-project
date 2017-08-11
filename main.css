@@ -1,31 +1,62 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
 main {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	width: 500px;
 	height: 500px;
 	margin: 0 auto;
 }
 
-#output {
-	text-align: center;
-	font-size: 2em;
+main > .row {
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: nowrap;
 }
 
-main button {
+.row button {
 	background-color: #f07;
 	color: white;
 	text-align: center;
-	border: 1px white solid;
+	border: none;
 	width: 25%;
-	flex-grow: 1;
 	vertical-align: middle;
+	font-size: 1.3em;
+	cursor: pointer;
 }
 
-#equals {
-	flex-grow: 2;
+.row.display {
+	background-color: gray;
+	font-size: 2em;
+}
+
+p#display {
+	display: inline;
+	margin-left: auto;
+}
+
+
+
+
+.equals {
+	width: 25%;
+	background-color: #fae;
 }
 
 .input.operator {
 	background-color: #fae;
+}
+
+.input.zero {
+	width: 25%;
+}
+
+.input.decimal {
+	width:25%;
 }
