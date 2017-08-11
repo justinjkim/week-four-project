@@ -1,44 +1,62 @@
 let display = document.getElementById("display");
-display.innerHTML = "";
+display.innerHTML = "0";
+let evaluation = [];
 
-let buttons = document.querySelectorAll(".button");
+let input = document.querySelectorAll(".input");
+for (let i = 0; i < input.length; i++) {
 
-function logit() {
-	let target = this.value;
-	console.log(target);
-	output.innerHTML += target;
-	
+	input[i].addEventListener("click", function() {
+		
+		if (display.innerHTML === "0") {
+			display.innerHTML = "";
+			evaluation += input[i].value;
+			display.innerHTML += input[i].value;
+			console.log(input[i].value);
+		}
+		else {
+			evaluation += input[i].value;
+			display.innerHTML += input[i].value;
+			console.log(input[i].value);
+		}
 
-	let total = output.innerHTML;
-	console.log(total);
-
-	if (target === "=") {
-		eval(target);
-	}
-
+		
+	})
 }
 
-for (i in buttons) {
-	buttons[i].addEventListener("click", logit 
-		
-		// if (target.value === "AC") {
-		// 	output.innerHTML = "0";
-		// 	operation = 0;
-		// }
-		// else if (target === "=") {
-		// 	output.innerHTML = eval(output.innerHTML);
-
-		// }
-
-		// else {
-		// 	operation += target;
-		// 	let total = eval(operation);
-		// 	console.log(total);
-		// 	return total;
-		// }
-		 // end of onclick function
-	); // end of event listener
-} // end of for loop
+console.log(evaluation);
 
 
- 
+let equals = document.querySelector(".equals");
+equals.addEventListener("click", function() {
+	let answer = eval(evaluation);
+	display.innerHTML = answer;
+	console.log(answer);
+	if (evaluation[evaluation.length - 1] === "0") {
+		console.log("you cannot divide by zero!");
+	}
+});
+
+
+
+let AC = document.querySelector(".clear");
+AC.addEventListener("click", function() {
+	evaluation = [];
+	display.innerHTML = "0";
+})
+
+
+// function logit() {
+// 	let target = this.value;
+// 	console.log(target);
+// 	output.innerHTML += target;
+	
+
+// 	let total = output.innerHTML;
+// 	console.log(total);
+
+// 	if (target === "=") {
+// 		eval(target);
+// 	}
+
+// }
+
