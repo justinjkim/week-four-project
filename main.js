@@ -6,7 +6,9 @@ let input = document.querySelectorAll(".input");
 for (let i = 0; i < input.length; i++) {
 
 	input[i].addEventListener("click", function() {
-		
+
+
+
 		if (display.innerHTML === "0") {
 			display.innerHTML = "";
 			evaluation += input[i].value;
@@ -29,7 +31,7 @@ equals.addEventListener("click", function() {
 	let answer = eval(evaluation);
 	display.innerHTML = answer.toLocaleString({minimumFractionDigits: 2});
 	console.log(answer);
-
+	console.log(display.innerHTML);
 });
 
 
@@ -42,18 +44,10 @@ AC.addEventListener("click", function() {
 })
 
 
-// function logit() {
-// 	let target = this.value;
-// 	console.log(target);
-// 	output.innerHTML += target;
-	
 
-// 	let total = output.innerHTML;
-// 	console.log(total);
-
-// 	if (target === "=") {
-// 		eval(target);
-// 	}
-
-// }
-
+// square root function
+let squareroot = document.querySelector(".squareroot");
+squareroot.addEventListener("click", function() {
+	let special = Math.sqrt(evaluation);
+	display.innerHTML = special;
+});
