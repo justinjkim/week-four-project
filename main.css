@@ -1,5 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	background-color: #565A5D;
 }
 
 h1 {
@@ -9,8 +10,8 @@ main {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	width: 500px;
-	height: 500px;
+	width: 700px;
+	height: 700px;
 	margin: 0 auto;
 }
 
@@ -21,14 +22,19 @@ main > .row {
 }
 
 .row button {
-	background-color: #f07;
-	color: white;
+	background-color: #565A5D;
+	color: #BAC1C7;
 	text-align: center;
 	border: none;
 	width: 25%;
 	vertical-align: middle;
 	font-size: 1.3em;
 	cursor: pointer;
+	transition: background-color ease 0.4s;
+}
+
+.row button:hover {
+
 }
 
 .row.display {
