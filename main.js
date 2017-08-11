@@ -17,27 +17,24 @@ for (let i = 0; i < input.length; i++) {
 			evaluation += input[i].value;
 			display.innerHTML += input[i].value;
 			console.log(input[i].value);
-		}
-
-		
-	})
-}
-
-console.log(evaluation);
+		}		
+	}) // end of event listener
+} // end of for loop
 
 
+
+// separation function for "=" button
 let equals = document.querySelector(".equals");
 equals.addEventListener("click", function() {
 	let answer = eval(evaluation);
-	display.innerHTML = answer;
+	display.innerHTML = parseFloat(answer);
 	console.log(answer);
-	if (evaluation[evaluation.length - 1] === "0") {
-		console.log("you cannot divide by zero!");
-	}
+
 });
 
 
 
+// separation function for "AC" button
 let AC = document.querySelector(".clear");
 AC.addEventListener("click", function() {
 	evaluation = [];
